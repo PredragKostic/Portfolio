@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ResponsiveAppBar from "./components/Navbar";
+import { Route, Routes } from 'react-router';
+import Home from './components/Home';
+import Technologies from './components/Technologies';
+import Projects from './components/Projects';
+import About from './components/About';
+import CV from './components/CV';
+// import { Home } from "@mui/icons-material";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+          <ResponsiveAppBar />
+          <Routes>
+          
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Technologies" element={<Technologies />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/CV" element={<CV />} />
+          </Routes>
+          
+        </div>
+      );
 }
 
 export default App;
