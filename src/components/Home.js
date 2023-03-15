@@ -1,7 +1,8 @@
 import React from "react";
+import './Home.css';
 
 const Home = () => {
-    return <div className="Home" >Home Router</div>
+    return <div className="home" >Home Router</div>
 }
 
 export default Home;
